@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from "prop-types";
 import Post from './Post';
-import CommentSection from '../CommentSection/CommentSection';
+
 
 
 
@@ -15,7 +15,7 @@ const PostContainer = props => {
         <React.Fragment>
             <section className='post-container'>
                 <Post dataArr={props.dataArr} />
-                <CommentSection />
+                
 
             </section>
         </React.Fragment>

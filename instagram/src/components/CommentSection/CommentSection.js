@@ -1,11 +1,14 @@
 import React from 'react';
 // import PropTypes from "prop-types";
 
-const CommentSection = () => {
+const CommentSection = props => {
     return (
+        <React.Fragment>
 
-        <div className="comment-section">Comment Section</div>
-        
+            This is where comments go {props.username}
+
+
+        </React.Fragment>
     )
 }
 
