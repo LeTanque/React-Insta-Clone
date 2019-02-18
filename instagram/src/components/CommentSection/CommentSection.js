@@ -3,7 +3,9 @@ import React from 'react';
 
 const CommentSection = () => {
     return (
-        <h3>Comment Section</h3>
+
+        <div className="comment-section">Comment Section</div>
+        
     )
 }
 

@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-// import logo from './assets/logo.svg';
-import dummyData from './dummy-data';
+import data from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import CommentSection from './components/CommentSection/CommentSection';
 import PostContainer from './components/PostContainer/PostContainer';
 
 
-const dummyDataArr = dummyData;
-console.log(dummyDataArr);
+const dataArr = data;
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dataArr
+    };
+  }
+
+
   render() {
+    console.log(dataArr);
+    console.log(dataArr[0].likes);
+
     return (
-      <div className="App">
+      
+      <section className="App">
         
         <SearchBar />
-        <PostContainer>
-          <CommentSection />
-        </PostContainer>
+
+        <section className='post-container-container'>
+          <PostContainer key={this.state.timestamp} dataArr={this.state.dataArr} />
+          
+        </section>
         
         
-      </div>
+      </section>
     );
   }
 }

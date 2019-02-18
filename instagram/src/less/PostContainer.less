@@ -1,0 +1,40 @@
+.post-container {
+    background-color: @white;
+    color: @black;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    .border-radius(3px;3px;3px;3px);
+    .box-shadow(1px;4px;15px;1px;@gray);
+    .post {
+        .post-header {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            .user-img {
+                width: 100%;
+                padding: 10px;
+                border-radius: 30px;
+            }
+            .user-name {
+                text-align: left;
+                align-self: center;
+            }
+        }
+
+        .post-img {
+            width: 100%;
+            margin: 0 auto;
+            padding: 3px;
+        }
+
+        .post-actions {
+            display: flex;
+            padding: 10px;
+            font-size: 2rem;
+            svg {
+                margin: 0 10px 0 0;
+            }
+        }
+
+    }
+}

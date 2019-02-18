@@ -3,10 +3,15 @@ import React from 'react';
 
 const SearchBar = () => {
     return (
-        <h3>Search Bar</h3>
+
+        <section className="search-bar-container">
+            <div className="search-bar">
+                <h3>Instagram</h3>
+            </div>
+        </section>
     )
 }
 
 
 
-export default SearchBar
+export default SearchBar;
