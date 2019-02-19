@@ -17,13 +17,13 @@ class CommentSection extends React.Component {
             text: this.state.text
         };
         this.setState({
-            comments: [...this.state.comments, newComment]
+            comments: [...this.state.comments, newComment],
+            text: ''
         });
     };
 
     
     handleChanges = synthEvent => {
-        console.log(this.props.comments);
         this.setState({
             [synthEvent.target.name]: synthEvent.target.value
         });
