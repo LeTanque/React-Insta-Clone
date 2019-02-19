@@ -18,7 +18,6 @@ class App extends Component {
 
   render() {
     console.log(dataArr);
-    console.log(dataArr[0].likes);
 
     return (
       

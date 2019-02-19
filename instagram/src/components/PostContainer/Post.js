@@ -2,9 +2,10 @@ import React from 'react';
 import { FiHeart, FiMessageCircle} from 'react-icons/fi';
 import CommentSection from '../CommentSection/CommentSection';
 import AddComment from '../CommentSection/AddComment';
-// import moment from 'moment';
+import moment from 'moment';
 
 const Post = props => {
+
     // Post key is the timestamp + the username because a user would not be able
     // to post multiple posts at the exact same time and date, though different users
     // could; making timestamp alone insufficient. 
@@ -35,7 +36,10 @@ const Post = props => {
                     <CommentSection username={post.username} comments={post.comments} />
 
 
-                    <div className="timestamp">{post.timestamp}</div>
+                    {/* <div className="timestamp">{moment.unix(post.timestamp).format("MM/DD/YYYY")} - {post.timestamp}</div> */}
+                    <div className="timestamp">
+                        {moment(post.timestamp, 'MMMM Do YYYY, LTS').format('dddd')}
+                    </div>
 
                     <hr></hr>
 
@@ -47,6 +51,8 @@ const Post = props => {
 
         </React.Fragment>
     )
+
+    
 }
 
 export default Post
