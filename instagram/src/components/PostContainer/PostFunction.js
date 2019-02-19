@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiHeart, FiMessageCircle} from 'react-icons/fi';
 import CommentSection from '../CommentSection/CommentSection';
-import moment from 'moment';
-import AddComment from '../CommentSection/AddComment';
+
+// import AddComment from '../CommentSection/AddComment';
 
 
 
@@ -38,16 +38,11 @@ const Post = props => {
                         <div className='post-likes'>{post.likes} likes</div>
                         
                         
-                        <CommentSection username={post.username} comments={post.comments} />
+                        <CommentSection timestamp={post.timestamp} username={post.username} comments={post.comments} />
     
     
-                        <div className="timestamp " >
-                            {moment(post.timestamp, 'MMMM Do YYYY, LTS').format('dddd')}
-                        </div>
     
-                        <hr></hr>
-    
-                        <AddComment comments={post.comments} />
+                        {/* <AddComment comments={post.comments} /> */}
     
                     </section>
                 ))};

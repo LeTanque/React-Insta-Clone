@@ -6,46 +6,47 @@ class AddComment extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: ''
+            comments: props.comments
         }
     }
 
-    handleChanges = synthEvent => {
-        this.setState({ [synthEvent.target.name]: synthEvent.target.value });
-    };
-
-    submitTask = event => {
+    addComment = (event) => {
         event.preventDefault();
-        this.setState({ 
-            text: '' 
-        });
-        this.addComment(this.state.text);
-    }
-
-    addComment = (stateText) => {
         const newComment = {
             username: `frank`,
-            text: stateText
+            text: ''
         };
         this.setState({
-            text: [...this.props.comments, newComment]
+            comments: [...this.state.comments, newComment]
         });
     };
 
+    
+    handleChanges = synthEvent => {
+        console.log(this.props.comments);
+        this.setState({
+            [synthEvent.target.name]: synthEvent.target.value
+        });
+    };
+
+
     render() {
-        console.log(this.props.comments);  // Seems the props are passed in correctly
-        console.log(this.state.text);  //
+        // console.log(this.props.comments);  // Seems the props are passed in correctly
+        // console.log(this.state.text);  //
 
         return (
             <React.Fragment>
 
-                    <form className='add-comment' onSubmit={this.submitTask} >
+                    <form 
+                        className='add-comment' 
+                        onSubmit={this.addComment} 
+                    >
 
                         <input 
                             placeholder='Add a comment...'
-                            type='text'
+                            // type='text'
                             name='text'
-                            value={this.state.text}
+                            value={this.text}
                             onChange={this.handleChanges}
                         />
 
@@ -58,3 +59,4 @@ class AddComment extends Component {
 }
 
 export default AddComment
+
