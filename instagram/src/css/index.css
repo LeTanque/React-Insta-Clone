@@ -396,11 +396,12 @@ body .App {
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
-  border-radius: 3px 3px 3px 3px;
-  box-shadow: 1px 4px 15px 1px #999999;
 }
 .post-container .post {
   padding: 3px;
+  margin: 0 0 20px 0;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 1px 4px 15px 1px #999999;
 }
 .post-container .post .post-header {
   display: grid;
@@ -439,4 +440,10 @@ body .App {
 .comment-section {
   text-align: left;
   padding: 0 10px;
+}
+.add-comment {
+  color: #aaaaaa;
+  padding: 0 10px 10px 10px;
+  font-size: 1.2rem;
+  text-align: left;
 }

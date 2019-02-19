@@ -5,8 +5,9 @@ const CommentSection = props => {
     return (
         <React.Fragment>
 
-            This is where comments go {props.username}
-
+            <section className="comment-section">
+                This is where comments go {props.username}
+            </section>
 
         </React.Fragment>
     )
