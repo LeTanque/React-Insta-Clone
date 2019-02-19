@@ -9,7 +9,7 @@ const CommentSection = props => {
             <section className="comment-section">
 
                 {props.comments.map(comment => (
-                    <div key={comment.username} className='comment' >
+                    <div key={Math.random()} className='comment' >
                         <strong>{comment.username} </strong>
                         {comment.text}
                     </div>

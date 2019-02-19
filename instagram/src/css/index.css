@@ -389,6 +389,7 @@ body .App {
 .search-bar-container .search-bar {
   display: flex;
   text-align: left;
+  align-items: center;
 }
 .search-bar-container .search-bar .search-bar-logo {
   font-size: 2.8rem;
@@ -396,19 +397,28 @@ body .App {
 .search-bar-container .search-bar .search-bar-logo svg {
   margin: 0 10px;
   align-self: center;
-  vertical-align: bottom;
+  vertical-align: baseline;
 }
-.search-bar-container .search-bar .search-bar-logo span {
+.search-bar-container .search-bar .search-bar-logo .ig-logo {
   border-left: 1px solid #aaaaaa;
   padding-left: 10px;
+  max-width: 125px;
+  vertical-align: sub;
+}
+.search-bar-container .search-bar form {
+  padding: 0;
+  width: unset;
+  box-shadow: none;
 }
 .search-bar-container .search-bar form input {
   font-size: 1.4rem;
   padding: 10px;
+  margin: 0 auto;
   border-radius: 3px 3px 3px 3px;
 }
 .search-bar-container .search-bar .search-bar-icons {
   font-size: 2.8rem;
+  margin-right: 20px;
 }
 .search-bar-container .search-bar .search-bar-icons svg {
   margin-left: 10px;
@@ -417,7 +427,7 @@ body .App {
   background-color: #ffffff;
   color: #000000;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 20px auto;
 }
 .post-container .post {

@@ -10,28 +10,35 @@
     .search-bar { 
         display: flex;
         text-align: left;
+        align-items: center;
         .search-bar-logo {
             font-size: 2.8rem;
             svg {
                 margin: 0 10px;
                 align-self: center;
-                vertical-align: bottom;
+                vertical-align: baseline;
             }
-            span {
+            .ig-logo {
                 border-left: 1px solid @light;
                 padding-left: 10px;
+                max-width: 125px;
+                vertical-align: sub;
             }
         }
         form {
-            
+            padding: 0;
+            width: unset;
+            box-shadow: none;
             input {
                 font-size: 1.4rem;
                 padding: 10px;
+                margin: 0 auto;
                 .border-radius(3px);
             }
         }
         .search-bar-icons {
             font-size: 2.8rem;
+            margin-right: 20px;
             svg {
                 margin-left: 10px;
             }

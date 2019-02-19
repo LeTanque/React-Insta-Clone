@@ -1,4 +1,5 @@
 import React from 'react';
+import igLogo from '../../assets/1200px-Instagram_logo.svg.png'
 // import PropTypes from "prop-types";
 import { FiInstagram, FiCompass, FiHeart, FiUser } from 'react-icons/fi';
 
@@ -9,7 +10,7 @@ const SearchBar = () => {
             <div className="search-bar">
                 
                 <div className='search-bar-logo'>
-                    <FiInstagram /><span>Instagramma</span>
+                    <FiInstagram /><img src={igLogo} alt='Instagram logo' className='ig-logo' />
                 </div>
                 
                 <form>
