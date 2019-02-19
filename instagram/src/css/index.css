@@ -390,7 +390,7 @@ button:active::after {
 }
 body {
   background-color: #ffffff;
-  color: #ffffff;
+  color: #232323;
 }
 body .App {
   text-align: center;

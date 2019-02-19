@@ -16,37 +16,35 @@ class App extends Component {
     };
   }
 
-  // addComment = (event, comment) => {  // UNFINISHED
-  //   event.preventDefault();
-  //   const newTask = {
-  //     comments:,
-  //     id: Date.now(),
-  //     completed: false
-  //   };
-  //   this.setState({
-  //     todoArr: [...this.state.todoArr, newTask]
-  //   });
-  // };
 
 
 
   render() {
-    // console.log(dataArr);s
-
+    console.log(this.state.dataArr[0].timestamp);
+    
     return (
       
-      <section className="App">
-        
-        <SearchBar />
 
+      <section className="App">
+
+
+        <SearchBar 
+          // key={this.state.dataArr} 
+          dataArr={this.state.dataArr} 
+        />
+
+        
         <section className='post-container-container'>
-          <PostContainer addComment={this.addComment} key={this.state.timestamp} dataArr={this.state.dataArr} />
-          
+        
+          <PostContainer 
+            // key={this.state.timestamp} 
+            dataArr={this.state.dataArr} 
+          />
           
         </section>
-        
-        
       </section>
+
+
     );
   }
 }

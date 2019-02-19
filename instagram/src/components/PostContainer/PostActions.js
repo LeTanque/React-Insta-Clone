@@ -3,8 +3,6 @@ import { FiHeart, FiMessageCircle} from 'react-icons/fi';
 
 
 
-
-
 class PostActions extends React.Component {
     constructor(props){
         super(props);
@@ -13,21 +11,17 @@ class PostActions extends React.Component {
         }
     }
 
-    addLike = event => {
+    addLike = () => {
         this.setState({likes: this.state.likes + 1})
     }
 
     render() {
-        console.log(this.state.likes)
         return (
             <React.Fragment>
 
 
                 <div className='post-actions'>
-                    <span className="" onClick={() => this.addLike()}>
-                        <FiHeart />
-                    </span>
-                    <FiMessageCircle />
+                    <FiHeart onClick={() => this.addLike()} /> <FiMessageCircle />
                 </div>
 
 
