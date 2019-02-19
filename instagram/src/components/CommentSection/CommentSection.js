@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from "prop-types";
+
 
 const CommentSection = props => {
     // Key is username of commenter + math.random.

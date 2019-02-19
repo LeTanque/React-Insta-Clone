@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 
+
 const dataArr = data;
 
 
@@ -14,6 +15,19 @@ class App extends Component {
       dataArr
     };
   }
+
+  addComment = (event, comment) => {  // UNFINISHED
+  //   event.preventDefault();
+  //   const newTask = {
+  //     comments:,
+  //     id: Date.now(),
+  //     completed: false
+  //   };
+  //   this.setState({
+  //     todoArr: [...this.state.todoArr, newTask]
+  //   });
+  };
+
 
 
   render() {
@@ -26,7 +40,8 @@ class App extends Component {
         <SearchBar />
 
         <section className='post-container-container'>
-          <PostContainer key={this.state.timestamp} dataArr={this.state.dataArr} />
+          <PostContainer addComment={this.addComment} key={this.state.timestamp} dataArr={this.state.dataArr} />
+          
           
         </section>
         
