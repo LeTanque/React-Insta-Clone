@@ -5,12 +5,17 @@ import AddComment from '../CommentSection/AddComment';
 // import moment from 'moment';
 
 const Post = props => {
+    // Post key is the timestamp + the username because a user would not be able
+    // to post multiple posts at the exact same time and date, though different users
+    // could; making timestamp alone insufficient. 
+    // A UID attached to each post would be superior, but this will be sufficient for 
+    // a long time, I imagine.
     return (
         <React.Fragment>
 
 
             {props.dataArr.map(post => (
-                <section className="post" key={post.timestamp} >
+                <section className="post" key={post.timestamp + post.username} >
                     
                     <div className='post-header'>
                         <img src={post.thumbnailUrl} alt={post.username} className="user-img" />
@@ -37,7 +42,6 @@ const Post = props => {
                     <AddComment />
 
                 </section>
-                
             ))}
 
 

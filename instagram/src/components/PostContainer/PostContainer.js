@@ -1,7 +1,6 @@
 import React from 'react';
-// import PropTypes from "prop-types";
 import Post from './Post';
-
+import PropTypes from "prop-types";
 
 
 
@@ -20,6 +19,25 @@ const PostContainer = props => {
             </section>
         </React.Fragment>
         
+    )
+}
+
+// PoopTypes
+PostContainer.propTypes = {
+    dataArr: PropTypes.arrayOf(
+        PropTypes.shape({
+            imageUrl: PropTypes.string.isRequired,
+            likes: PropTypes.number.isRequired,
+            thumbnailUrl: PropTypes.string.isRequired,
+            timestamp: PropTypes.string.isRequired,
+            username: PropTypes.string.isRequired,
+            comments: PropTypes.arrayOf(
+                PropTypes.shape({
+                    text: PropTypes.string.isRequired,
+                    username: PropTypes.string.isRequired
+                })
+            )
+        })
     )
 }
 
