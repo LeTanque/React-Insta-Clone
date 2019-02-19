@@ -5,9 +5,18 @@ const CommentSection = props => {
     return (
         <React.Fragment>
 
+
             <section className="comment-section">
-                This is where comments go {props.username}
+
+                {props.comments.map(comment => (
+                    <div key={comment.username} className='comment' >
+                        <strong>{comment.username} </strong>
+                        {comment.text}
+                    </div>
+                ))}
+                
             </section>
+
 
         </React.Fragment>
     )

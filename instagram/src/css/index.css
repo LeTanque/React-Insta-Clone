@@ -227,22 +227,22 @@ code {
   border-radius: 10px;
 }
 form {
+  background-color: #ffffff;
   display: flex;
-  z-index: 10;
+  flex-flow: column;
   position: relative;
   width: 400px;
-  margin: 16px auto;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
-  align-items: center;
-  background-color: #fff;
   padding: 1rem;
-  flex-flow: column;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: 0 0 0 0 #232323;
+  z-index: 10;
 }
 form > input {
   border: 0;
   padding: 12px 16px;
   margin: 8px;
-  background: #fff;
+  background: #ffffff;
   font-size: 1rem;
   width: 240px;
   border-radius: 0;
@@ -265,8 +265,7 @@ button {
   text-overflow: ellipsis;
   text-transform: uppercase;
   color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
-  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
   font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
   font-size: 14px;
   font-weight: 500;
@@ -368,14 +367,14 @@ button:active::after {
   color: #ffffff;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #ffffff;
 }
 body .App {
   text-align: center;
 }
 .post-container-container {
-  margin-top: 100px;
+  margin-top: 125px;
 }
 .search-bar-container {
   background-color: #ffffff;
@@ -385,23 +384,48 @@ body .App {
   left: 0;
   width: 100vw;
   padding: 10px 0;
-  border-bottom: 1px solid #000000;
+  box-shadow: 0px 1px 12px 0px #323232;
 }
 .search-bar-container .search-bar {
+  display: flex;
   text-align: left;
+}
+.search-bar-container .search-bar .search-bar-logo {
+  font-size: 2.8rem;
+}
+.search-bar-container .search-bar .search-bar-logo svg {
+  margin: 0 10px;
+  align-self: center;
+  vertical-align: bottom;
+}
+.search-bar-container .search-bar .search-bar-logo span {
+  border-left: 1px solid #aaaaaa;
+  padding-left: 10px;
+}
+.search-bar-container .search-bar form input {
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.search-bar-container .search-bar .search-bar-icons {
+  font-size: 2.8rem;
+}
+.search-bar-container .search-bar .search-bar-icons svg {
+  margin-left: 10px;
 }
 .post-container {
   background-color: #ffffff;
   color: #000000;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   margin: 20px auto;
 }
 .post-container .post {
   padding: 3px;
   margin: 0 0 20px 0;
-  border-radius: 3px 3px 3px 3px;
-  box-shadow: 1px 4px 15px 1px #999999;
+  font-size: 1.2rem;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0px 1px 3px 0px #323232;
 }
 .post-container .post .post-header {
   display: grid;
@@ -432,18 +456,25 @@ body .App {
   text-align: left;
   font-weight: bold;
   padding: 0 10px;
+  margin-bottom: 10px;
 }
 .post-container .post .timestamp {
   text-align: left;
   margin-left: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #c3c3c3;
 }
 .comment-section {
   text-align: left;
   padding: 0 10px;
 }
+.comment-section .comment {
+  margin-bottom: 5px;
+}
 .add-comment {
-  color: #aaaaaa;
+  color: #c3c3c3;
   padding: 0 10px 10px 10px;
-  font-size: 1.2rem;
   text-align: left;
 }

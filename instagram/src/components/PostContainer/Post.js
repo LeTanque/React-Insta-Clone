@@ -2,7 +2,7 @@ import React from 'react';
 import { FiHeart, FiMessageCircle} from 'react-icons/fi';
 import CommentSection from '../CommentSection/CommentSection';
 import AddComment from '../CommentSection/AddComment';
-import moment from 'moment';
+// import moment from 'moment';
 
 const Post = props => {
     return (
@@ -27,8 +27,8 @@ const Post = props => {
                     <div className='post-likes'>{post.likes} likes</div>
                     
                     
-                    <CommentSection username={post.username} />
-                    
+                    <CommentSection username={post.username} comments={post.comments} />
+
 
                     <div className="timestamp">{post.timestamp}</div>
 
