@@ -16,7 +16,7 @@ class App extends Component {
     };
   }
 
-  addComment = (event, comment) => {  // UNFINISHED
+  // addComment = (event, comment) => {  // UNFINISHED
   //   event.preventDefault();
   //   const newTask = {
   //     comments:,
@@ -26,12 +26,12 @@ class App extends Component {
   //   this.setState({
   //     todoArr: [...this.state.todoArr, newTask]
   //   });
-  };
+  // };
 
 
 
   render() {
-    console.log(dataArr);
+    // console.log(dataArr);s
 
     return (
       

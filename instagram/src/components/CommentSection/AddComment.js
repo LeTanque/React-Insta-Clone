@@ -15,36 +15,27 @@ class AddComment extends Component {
     };
 
     submitTask = event => {
-        this.setState({ text: '' });
-        this.props.addComment(event, this.state.text);
+        event.preventDefault();
+        this.setState({ 
+            text: '' 
+        });
+        this.addComment(this.state.text);
     }
 
-    addComment = (event, text) => {
-        event.preventDefault();
+    addComment = (stateText) => {
         const newComment = {
             username: `frank`,
-            text: text
+            text: stateText
         };
         this.setState({
-            comments: [...this.props.comments, newComment]
+            text: [...this.props.comments, newComment]
         });
     };
 
-    // addTask = (event, task) => {
-    //     event.preventDefault();
-    //     const newTask = {
-    //       task: task,
-    //       id: Date.now(),
-    //       completed: false
-    //     };
-    //     this.setState({
-    //       todoArr: [...this.state.todoArr, newTask]
-    //     });
-    // };
-    
     render() {
-        console.log(this.props.comments);
-        
+        console.log(this.props.comments);  // Seems the props are passed in correctly
+        console.log(this.state.text);  //
+
         return (
             <React.Fragment>
 
