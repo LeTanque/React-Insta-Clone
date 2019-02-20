@@ -16,7 +16,7 @@ const SearchBar = props => {
                         <FiInstagram /><img src={igLogo} alt='Instagram logo' className='ig-logo' />
                     </div>
                     
-                    <form >
+                    <div className='form' >
                         <input 
                             placeholder="🔍 Search" 
                             type="text" 
@@ -24,7 +24,7 @@ const SearchBar = props => {
                             value={props.searchInput}
                             onChange={props.searchHandler}
                         />
-                    </form>
+                    </div>
 
                     <div className='search-bar-icons'>
                         <FiCompass /><FiHeart /><FiUser />

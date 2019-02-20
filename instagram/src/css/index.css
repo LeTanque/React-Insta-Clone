@@ -427,19 +427,20 @@ body .App {
   max-width: 125px;
   vertical-align: sub;
 }
-.search-bar-container .search-bar form {
+.search-bar-container .search-bar .form {
   padding: 0;
   width: unset;
   box-shadow: none;
+  margin: 0 auto;
 }
-.search-bar-container .search-bar form input {
+.search-bar-container .search-bar .form input {
   background-color: #fafafa;
   font-size: 1.4rem;
   padding: 5px 10px;
   margin: 0 auto;
   border-radius: 3px 3px 3px 3px;
 }
-.search-bar-container .search-bar form > input {
+.search-bar-container .search-bar .form > input {
   border: 1px solid #f0f0f0;
 }
 .search-bar-container .search-bar .search-bar-icons {
