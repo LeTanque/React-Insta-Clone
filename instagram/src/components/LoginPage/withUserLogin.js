@@ -1,10 +1,10 @@
 import React from "react";
 
-const withUserLogin = FirstComponent => SecondComponent => props => {
+const withUserLogin = App => LoginPage => props => {
   if (localStorage.getItem("user")) {
-    return <FirstComponent />;
+    return <PostsPage />;
   }
-  return <SecondComponent />;
+  return <LoginPage />;
 };
 
 export default withUserLogin;
