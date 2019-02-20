@@ -23,29 +23,25 @@ class App extends Component {
   };
 
   searchHandler = event => {
+    // event.preventDefault();
     this.changeHandler(event);
-    this.setState(prevState => {
+    this.setState( prevState => {
       const filteredPostArray = prevState.postData.filter(post =>
         post.username.includes(prevState.searchInput)
       );
       return { filteredPosts: filteredPostArray };
     });
-  }
-
+  };
 
 
   render() {
-    // console.log(this.state.dataArr[0].timestamp);
-    // console.log(this.state.searchInput)
+
     return (
       
 
       <section className="App">
 
-
         <SearchBar 
-          // key={this.state.dataArr} 
-          // dataArr={this.state.dataArr} 
           searchInput={this.state.searchInput}
           searchHandler={this.searchHandler}
         />

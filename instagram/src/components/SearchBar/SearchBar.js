@@ -16,23 +16,15 @@ const SearchBar = props => {
                         <FiInstagram /><img src={igLogo} alt='Instagram logo' className='ig-logo' />
                     </div>
                     
-                    <form onSubmit={props.search} >
-
+                    <form >
                         <input 
-                            type="text" 
                             placeholder="🔍 Search" 
+                            type="text" 
+                            name="searchInput"
                             value={props.searchInput}
-                            onChange={props.searchHandler} 
+                            onChange={props.searchHandler}
                         />
-
-                        {/* <input 
-                            placeholder='🔍 Search'
-                            name='username'
-                            value={props.username}
-                            onChange={props.handleSearch}
-                        /> */}
-
-                    </form> 
+                    </form>
 
                     <div className='search-bar-icons'>
                         <FiCompass /><FiHeart /><FiUser />
