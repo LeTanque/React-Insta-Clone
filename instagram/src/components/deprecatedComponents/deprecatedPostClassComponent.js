@@ -9,7 +9,7 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            // likesTotal: post.likes,
         };
     }
 
@@ -39,7 +39,8 @@ class Post extends React.Component {
                         <img src={post.imageUrl} alt={post.name} className='post-img' />
                         
                         <div className='post-actions'>
-                            <FiHeart /><FiMessageCircle />
+                            <div className="footer-icon repost" onClick={() => this.addRepost()}><FiHeart /></div>
+                            <FiMessageCircle />
                         </div>
     
     

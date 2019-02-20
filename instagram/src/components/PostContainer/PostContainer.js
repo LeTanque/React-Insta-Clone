@@ -1,11 +1,11 @@
 import React from 'react';
-import Post from './PostFunction';
+import Post from './Post';
 import PropTypes from "prop-types";
 
 
 
 const PostContainer = props => {
-    if (!props.dataArr.length) {  // If there are no posts showing up, then do this
+    if (!props.postData.length) {  // If there are no posts showing up, then do this
         return <h4>Loading Posts...</h4>;
     }
 
@@ -13,7 +13,9 @@ const PostContainer = props => {
     return (
         <React.Fragment>
             <section className='post-container'>
-                <Post dataArr={props.dataArr} />
+
+            
+                <Post dataArr={props.postData} />
                 
 
             </section>
@@ -24,7 +26,7 @@ const PostContainer = props => {
 
 // PoopTypes
 PostContainer.propTypes = {
-    dataArr: PropTypes.arrayOf(
+    postData: PropTypes.arrayOf(
         PropTypes.shape({
             imageUrl: PropTypes.string.isRequired,
             likes: PropTypes.number.isRequired,
