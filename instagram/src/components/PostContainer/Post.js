@@ -1,9 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PostActions from './PostActions';
-// import AddComment from '../CommentSection/AddComment';
-
-
 
 
 const Post = props => {
