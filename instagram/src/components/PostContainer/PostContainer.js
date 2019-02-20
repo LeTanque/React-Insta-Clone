@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from './PostFunction';
+import Post from './Post';
 import PropTypes from "prop-types";
 
 
@@ -13,6 +13,8 @@ const PostContainer = props => {
     return (
         <React.Fragment>
             <section className='post-container'>
+
+            
                 <Post dataArr={props.dataArr} />
                 
 
