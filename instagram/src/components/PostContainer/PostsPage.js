@@ -5,8 +5,8 @@ import PostContainer from './PostContainer';
 
 
 class PostsPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       postData: [],
       filteredPosts: [],
@@ -34,6 +34,7 @@ class PostsPage extends Component {
 
 
   render() {
+    console.log(this.props.loggedInUser);
 
     return (
 
@@ -47,15 +48,13 @@ class PostsPage extends Component {
         <section className='post-container-container'>
         
           <PostContainer 
-            // key={this.state.timestamp} 
-            // dataArr={this.state.dataArr} 
             postData={
               this.state.filteredPosts.length > 0
                 ? this.state.filteredPosts
                 : this.state.postData
             }
           />
-          
+
         </section>
       </section>
 

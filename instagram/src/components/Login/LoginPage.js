@@ -1,15 +1,10 @@
 import React from "react";
-// import FirstComponent from "./FirstComponent";
-// import SecondComponent from "./SecondComponent";
-import withUserLogin from "./withUserLogin";
-import App from "../../App";
+import { FiInstagram } from 'react-icons/fi';
 
 
 
 // const ToShow = withUserLogin(FirstComponent)(SecondComponent);
 // const ToShow = withUserLogin(App);
-
-
 
 class LoginPage extends React.Component {
   state = {
@@ -17,10 +12,10 @@ class LoginPage extends React.Component {
   };
 
   toggleComponents = () => this.setState({ showFirst: !this.state.showFirst });
-  handleChanges = e => this.setState({ inputText: e.target.value });
+  handleChanges = event => this.setState({ inputText: event.target.value });
   signIn = e => {
     e.preventDefault();
-    window.localStorage.setItem("user", this.state.inputText);
+    window.localStorage.setItem("username", this.state.inputUsername);
     window.location.reload();
   };
   logout = e => {
@@ -32,15 +27,28 @@ class LoginPage extends React.Component {
   render() {
     return (
       <section className="login-page">
-        {/* <ToShow /> */}
-        <h1>Login</h1>
+
+
+        <h1><FiInstagram /></h1>
+
         <input
           type="text"
           placeholder="username"
-          value={this.state.inputText}
+          value={this.state.inputUsername}
           onChange={this.handleChanges}
         />
+
         <br />
+        
+        <input
+          type="text"
+          placeholder="password"
+          value={this.state.inputPassword}
+          onChange={this.handleChanges}
+        />
+        
+        <br />
+        
         <button onClick={this.signIn} className='btn'>Sign-In</button>
 
 

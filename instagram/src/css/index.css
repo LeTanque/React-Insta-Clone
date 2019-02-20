@@ -398,13 +398,21 @@ button:active::after {
 }
 .login-page input {
   margin: 15px auto 5px auto;
-  padding: 5px;
-  width: 50%;
+  padding: 10px 5px;
+  width: 75%;
+  background-color: #fafafa;
   text-align: center;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  font-size: 1.6rem;
+}
+.login-page input:focus {
+  outline: none;
 }
 .login-page button {
   background-color: #3d92e0;
-  color: #ffffff;
+  color: #6fc4ff;
+  border-radius: 0px 0px 0px 0px;
 }
 body {
   background-color: #ffffff;
