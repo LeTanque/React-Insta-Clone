@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
     addComment = event => {
         event.preventDefault();
         const newComment = {
-            username: `Frank`,
+            username: localStorage.getItem('username'),
             text: this.state.text
         };
         this.setState({
@@ -33,6 +33,7 @@ class CommentSection extends React.Component {
     render() {
         // console.log(this.props.comments);  // Seems the props are passed in correctly
         // console.log(this.state.text);  //
+        // console.log(localStorage.getItem('username')); // This is how you access localstorage
 
         return (
             <React.Fragment>
@@ -63,10 +64,8 @@ class CommentSection extends React.Component {
 
                     <input 
                         placeholder='Add a comment...'
-                        // type='text'
                         name='text'
                         value={this.state.text}
-                        // input={this.state.input}
                         onChange={this.handleChanges}
                     />
 

@@ -9,7 +9,7 @@ const authenticate = App => LoginPage =>
       };
     }
     componentDidMount() {
-      if (!localStorage.getItem('username')) {
+      if (!localStorage.getItem('username')) {  // This is how you pass something to localstorage
         this.setState({ loggedIn: false });
       } else {
         this.setState({ loggedIn: true });

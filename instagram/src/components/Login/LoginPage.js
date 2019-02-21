@@ -2,9 +2,9 @@ import React from "react";
 import { FiInstagram } from 'react-icons/fi';
 
 
-
 // const ToShow = withUserLogin(FirstComponent)(SecondComponent);
 // const ToShow = withUserLogin(App);
+
 
 class LoginPage extends React.Component {
   state = {
@@ -12,7 +12,8 @@ class LoginPage extends React.Component {
     inputPassword: ''
   };
 
-  weakHashPass = function(input){
+  // This is probably how passwords were hashed in the 90's.
+  weakHashPass = function(input){ // This is a weak way to hash a password, but you get the idea. 
     return input.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
   }
 
@@ -23,10 +24,10 @@ class LoginPage extends React.Component {
   handlePassword = event => this.setState({ 
     inputPassword: event.target.value,
   });
-  
+
   signIn = e => {
     e.preventDefault();
-    window.localStorage.setItem("username", this.state.inputUsername);
+    window.localStorage.setItem("username", this.state.inputUsername); // This is how you pass something to localstorage
     window.localStorage.setItem("password", this.weakHashPass(this.state.inputPassword));
     window.location.reload();
   };
