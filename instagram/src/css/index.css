@@ -413,8 +413,9 @@ button:active::after {
   outline: none;
 }
 .login-page button {
-  background-color: #3d92e0;
-  color: #6fc4ff;
+  background-color: #999999;
+  color: #ffffff;
+  width: 200px;
   border-radius: 0px 0px 0px 0px;
 }
 body {
