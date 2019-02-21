@@ -34,7 +34,7 @@ class PostsPage extends Component {
 
 
   render() {
-    console.log(this.props.loggedInUser);
+    
 
     return (
 

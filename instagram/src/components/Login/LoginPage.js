@@ -8,10 +8,8 @@ import { FiInstagram } from 'react-icons/fi';
 
 class LoginPage extends React.Component {
   state = {
-    showFirst: true
   };
 
-  toggleComponents = () => this.setState({ showFirst: !this.state.showFirst });
   handleChanges = event => this.setState({ inputText: event.target.value });
   signIn = e => {
     e.preventDefault();
@@ -25,6 +23,7 @@ class LoginPage extends React.Component {
   };
 
   render() {
+    
     return (
       <section className="login-page">
 
@@ -50,7 +49,7 @@ class LoginPage extends React.Component {
         <br />
         
         <button onClick={this.signIn} className='btn'>Sign-In</button>
-
+        
 
       </section>
     );

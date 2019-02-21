@@ -7,20 +7,21 @@ import LoginPage from './components/Login/LoginPage';
 
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      loggedIn: ''
+      
     };
   }
 
   render() {
-    console.log(this.state.loggedIn);
+    
     
     return (
-        
-      <PostsPage loggedInUser={this.state.loggedIn} />
 
+      
+      <PostsPage loggedInUser={this.state.loggedIn} />
+      
 
     );
   }
