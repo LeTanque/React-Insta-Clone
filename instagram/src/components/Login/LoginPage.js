@@ -14,7 +14,7 @@ class LoginPage extends React.Component {
 
   // This is probably how passwords were hashed in the 90's.
   weakHashPass = function(input){ // This is a weak way to hash a password, but you get the idea. 
-    return input.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+    return input.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a*Math.random()},0);              
   }
 
   handleChanges = event => this.setState({ 

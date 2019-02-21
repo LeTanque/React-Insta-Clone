@@ -14,7 +14,7 @@ const authenticate = App => LoginPage =>
       // If user only, access
       // If pass only, no access
       // If no user/pass, no access
-      if (!(localStorage.getItem('username') && localStorage.getItem('password')) === false) {  
+      if (!(localStorage.getItem('username') && localStorage.getItem('password')) === false) {
         this.setState({ loggedIn: true });
       } else {
         this.setState({ loggedIn: false });
