@@ -8,11 +8,16 @@ const authenticate = App => LoginPage =>
         loggedIn: false
       };
     }
-    componentDidMount() {
-      if (!localStorage.getItem('username')) {  // This is how you pass something to localstorage
-        this.setState({ loggedIn: false });
-      } else {
+
+    componentDidMount() { // This works, just not the way it's supposed to. 
+      // If user/pass entered, access
+      // If user only, access
+      // If pass only, no access
+      // If no user/pass, no access
+      if (!(localStorage.getItem('username') && localStorage.getItem('password')) === false) {  
         this.setState({ loggedIn: true });
+      } else {
+        this.setState({ loggedIn: false });
       }
     }
 
