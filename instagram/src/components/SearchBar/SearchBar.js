@@ -27,10 +27,11 @@ const SearchBar = props => {
                     </div>
 
                     <div className='search-bar-icons'>
-                        <FiCompass 
-                            onClick={props.logout} 
-                        />
-                        <FiHeart /><FiUser />
+                        <FiCompass />
+                        <FiHeart />
+                        <span className="user-button">
+                            <FiUser onClick={props.logout} />
+                        </span>
                     </div>
 
                 </div>
@@ -46,30 +47,3 @@ const SearchBar = props => {
 
 export default SearchBar;
 
-
-
-
-// search = event => {
-//     event.preventDefault();
-
-//     // this.state.dataArr.filter( searchTerm => this.state.username === searchTerm );
-// }
-
-
-// var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-// const result = words.filter(word => word.length > 6);
-// console.log(result);
-// // expected output: Array ["exuberant", "destruction", "present"]
-
-
-// handleSearch = synthEvent => {
-//     this.setState({ [synthEvent.target.name]: synthEvent.target.value });
-// };
-
-
-// {this.state.dataArr.map(post => (
-//     <React.Fragment key={post.timestamp}>
-//         <div >{post.username}</div>
-//     </React.Fragment>
-// ))}
-// ⚲

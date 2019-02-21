@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import data from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
-// import LoginPage from '../Login/LoginPage';
 
 
 class PostsPage extends Component {

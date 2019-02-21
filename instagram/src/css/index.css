@@ -370,6 +370,9 @@ button:active::after {
 .cgray {
   color: #999999;
 }
+.cred {
+  color: #dd1111;
+}
 .cblack {
   color: #000000;
 }
@@ -466,6 +469,15 @@ body .posts-page {
   margin: 0 auto;
   border-radius: 3px 3px 3px 3px;
 }
+.search-bar-container .search-bar .form input:focus {
+  outline-color: #dd1111;
+  outline-width: 2px;
+  outline-style: auto;
+  outline-offset: -3px;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
 .search-bar-container .search-bar .form > input {
   border: 1px solid #f0f0f0;
 }
@@ -475,6 +487,12 @@ body .posts-page {
 }
 .search-bar-container .search-bar .search-bar-icons svg {
   margin-left: 25px;
+}
+.search-bar-container .search-bar .search-bar-icons .user-button:hover {
+  color: #dd1111;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 .post-container {
   background-color: #ffffff;

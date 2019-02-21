@@ -8,14 +8,30 @@ import { FiInstagram } from 'react-icons/fi';
 
 class LoginPage extends React.Component {
   state = {
+    inputUsername: '',
+    inputPassword: ''
   };
 
-  handleChanges = event => this.setState({ inputText: event.target.value });
+  weakHashPass = function(input){
+    return input.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+  }
+
+  handleChanges = event => this.setState({ 
+    inputUsername: event.target.value,
+  });
+
+  handlePassword = event => this.setState({ 
+    inputPassword: event.target.value,
+  });
+  
   signIn = e => {
     e.preventDefault();
     window.localStorage.setItem("username", this.state.inputUsername);
+    window.localStorage.setItem("password", this.weakHashPass(this.state.inputPassword));
     window.location.reload();
   };
+
+  
 
   render() {
     
@@ -38,7 +54,7 @@ class LoginPage extends React.Component {
           type="text"
           placeholder="password"
           value={this.state.inputPassword}
-          onChange={this.handleChanges}
+          onChange={this.handlePassword}
         />
         
         <br />

@@ -23,6 +23,7 @@ const authenticate = App => LoginPage =>
     };
 
     render() {
+      console.log(this.state);
       
       if (this.state.loggedIn) {
         return <App loggedInUser={this.state.loggedIn} logout={this.logout} />;
