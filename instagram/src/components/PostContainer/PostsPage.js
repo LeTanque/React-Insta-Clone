@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
+// import LoginPage from '../Login/LoginPage';
 
 
 class PostsPage extends Component {
@@ -10,12 +11,14 @@ class PostsPage extends Component {
     this.state = {
       postData: [],
       filteredPosts: [],
-      searchInput: ""
+      searchInput: "",
     };
   }
   
   componentDidMount() {
-    this.setState({ postData: data });
+    this.setState({ 
+      postData: data
+    });
   };
 
   changeHandler = event => {
@@ -34,7 +37,6 @@ class PostsPage extends Component {
 
 
   render() {
-    
 
     return (
 
@@ -43,6 +45,7 @@ class PostsPage extends Component {
         <SearchBar 
           searchInput={this.state.searchInput}
           searchHandler={this.searchHandler}
+          logout={this.props.logout}
         />
         
         <section className='post-container-container'>

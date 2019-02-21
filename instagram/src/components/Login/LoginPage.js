@@ -16,11 +16,6 @@ class LoginPage extends React.Component {
     window.localStorage.setItem("username", this.state.inputUsername);
     window.location.reload();
   };
-  logout = e => {
-    e.preventDefault();
-    localStorage.clear();
-    window.location.reload();
-  };
 
   render() {
     

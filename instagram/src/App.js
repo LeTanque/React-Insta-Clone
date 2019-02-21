@@ -1,8 +1,7 @@
 import React from 'react';
-import PostsPage from './components/PostContainer/PostsPage';
 import authenticate from './components/Authentication/authenticate';
 import LoginPage from './components/Login/LoginPage';
-
+import PostsPage from './components/PostContainer/PostsPage';
 
 
 
@@ -15,12 +14,12 @@ class App extends React.Component {
   }
 
   render() {
-    
+
     
     return (
 
       
-      <PostsPage loggedInUser={this.state.loggedIn} />
+      <PostsPage loggedInUser={this.props.loggedInUser} logout={this.props.logout} />
       
 
     );

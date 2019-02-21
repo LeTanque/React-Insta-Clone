@@ -27,7 +27,10 @@ const SearchBar = props => {
                     </div>
 
                     <div className='search-bar-icons'>
-                        <FiCompass /><FiHeart /><FiUser />
+                        <FiCompass 
+                            onClick={props.logout} 
+                        />
+                        <FiHeart /><FiUser />
                     </div>
 
                 </div>

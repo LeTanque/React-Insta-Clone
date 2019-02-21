@@ -15,9 +15,17 @@ const authenticate = App => LoginPage =>
         this.setState({ loggedIn: true });
       }
     }
+
+    logout = e => {
+      e.preventDefault();
+      localStorage.clear();
+      window.location.reload();
+    };
+
     render() {
+      
       if (this.state.loggedIn) {
-        return <App />;
+        return <App loggedInUser={this.state.loggedIn} logout={this.logout} />;
       } 
       return <LoginPage />;
     }
