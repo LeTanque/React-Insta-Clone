@@ -370,6 +370,9 @@ button:active::after {
 .cgray {
   color: #999999;
 }
+.cred {
+  color: #dd1111;
+}
 .cblack {
   color: #000000;
 }
@@ -388,11 +391,38 @@ button:active::after {
   background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
+.login-page {
+  width: 50%;
+  background-color: #ebebeb;
+  margin: 20% auto 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+.login-page input {
+  margin: 15px auto 5px auto;
+  padding: 10px 5px;
+  width: 75%;
+  background-color: #fafafa;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  font-size: 1.6rem;
+}
+.login-page input:focus {
+  outline: none;
+}
+.login-page button {
+  background-color: #999999;
+  color: #ffffff;
+  width: 200px;
+  border-radius: 0px 0px 0px 0px;
+}
 body {
   background-color: #ffffff;
   color: #232323;
 }
-body .App {
+body .posts-page {
   text-align: center;
 }
 .post-container-container {
@@ -440,6 +470,15 @@ body .App {
   margin: 0 auto;
   border-radius: 3px 3px 3px 3px;
 }
+.search-bar-container .search-bar .form input:focus {
+  outline-color: #dd1111;
+  outline-width: 2px;
+  outline-style: auto;
+  outline-offset: -3px;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
 .search-bar-container .search-bar .form > input {
   border: 1px solid #f0f0f0;
 }
@@ -449,6 +488,12 @@ body .App {
 }
 .search-bar-container .search-bar .search-bar-icons svg {
   margin-left: 25px;
+}
+.search-bar-container .search-bar .search-bar-icons .user-button:hover {
+  color: #dd1111;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 .post-container {
   background-color: #ffffff;

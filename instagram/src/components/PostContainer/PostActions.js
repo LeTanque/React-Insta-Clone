@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiHeart, FiMessageCircle} from 'react-icons/fi';
+import { FiHeart, FiMessageCircle } from 'react-icons/fi';
 
 
 
@@ -7,15 +7,24 @@ class PostActions extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            likes: this.props.likes
+            likes: this.props.likes,
+            likeToggle: false
         }
     }
 
-
     addLike = () => {
-        this.setState({ likes: this.state.likes + 1 })
+        if (this.state.likeToggle === false) {
+            this.setState({ 
+                likes: this.state.likes +1,
+                likeToggle: true 
+            })
+        } else {
+            this.setState({ 
+                likes: this.state.likes -1,
+                likeToggle: false 
+            })
+        }
     }
-
 
     render() {
         return (

@@ -35,8 +35,8 @@
                 font-size: 1.4rem;
                 padding: 5px 10px;
                 margin: 0 auto;
-                
                 .border-radius(3px);
+                .form-outline;
             }
         }
         .form > input {
@@ -48,6 +48,12 @@
             margin-right: 25px;
             svg {
                 margin-left: 25px;
+            }
+            .user-button {
+                &:hover {
+                    color: @red;
+                    .transition;
+                }
             }
 
 

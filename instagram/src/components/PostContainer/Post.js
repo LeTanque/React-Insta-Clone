@@ -4,12 +4,12 @@ import PostActions from './PostActions';
 
 
 const Post = props => {
+
     // Post key is the timestamp + the username because a user would not be able
     // to post multiple posts at the exact same time and date, though different users
     // could; making timestamp alone insufficient. 
     // A UID attached to each post would be superior, but this will be sufficient for 
     // a long time, I imagine.
-        
 
         return (
             <React.Fragment>
