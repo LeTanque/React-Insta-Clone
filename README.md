@@ -15,7 +15,9 @@ How-to build this app:
 Notes:
 
   - The Higher Order Component used for authentication works by currying App and LoginPage
-  - Styled components and Less are used for styling 
+  - Styled components and Less are used for styling
+    - yarn add styled-components
+    - yarn add -D babel-plugin-styled-components
 
 
 ## Introduction
