@@ -1,6 +1,6 @@
 import React from "react";
 import { FiInstagram } from 'react-icons/fi';
-
+import { LoginPageSection, LoginPageInput, Button } from '../StyledComponents/StyledComponents';
 
 // const ToShow = withUserLogin(FirstComponent)(SecondComponent);
 // const ToShow = withUserLogin(App);
@@ -37,12 +37,12 @@ class LoginPage extends React.Component {
   render() {
     
     return (
-      <section className="login-page">
 
+      <LoginPageSection>
 
         <h1><FiInstagram /></h1>
 
-        <input
+        <LoginPageInput
           type="text"
           placeholder="username"
           value={this.state.inputUsername}
@@ -51,8 +51,8 @@ class LoginPage extends React.Component {
 
         <br />
         
-        <input
-          type="text"
+        <LoginPageInput
+          type="password"
           placeholder="password"
           value={this.state.inputPassword}
           onChange={this.handlePassword}
@@ -60,10 +60,10 @@ class LoginPage extends React.Component {
         
         <br />
         
-        <button onClick={this.signIn} className='btn'>Sign-In</button>
+        <Button onClick={this.signIn} >Log In</Button>
         
+      </LoginPageSection>
 
-      </section>
     );
   }
 }

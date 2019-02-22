@@ -2,6 +2,24 @@
 
 ## FRANK MARTINEZ BRANCH
 
+Goto netlify build [here](https://elastic-leakey-9ceb95.netlify.com/)
+
+## Pre-Introduction
+
+How-to build this app:
+
+  - Goto {root}/instagram
+  - Run yarn install
+  - Run yarn start
+
+Notes:
+
+  - The Higher Order Component used for authentication works by currying App and LoginPage
+  - Styled components and Less are used for styling
+    - yarn add styled-components
+    - yarn add -D babel-plugin-styled-components
+
+
 ## Introduction
 
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.

@@ -391,33 +391,6 @@ button:active::after {
   background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
 }
-.login-page {
-  width: 50%;
-  background-color: #ebebeb;
-  margin: 20% auto 0 auto;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px 10px 10px 10px;
-}
-.login-page input {
-  margin: 15px auto 5px auto;
-  padding: 10px 5px;
-  width: 75%;
-  background-color: #fafafa;
-  text-align: center;
-  border: 0;
-  border-bottom: 1px solid #999999;
-  font-size: 1.6rem;
-}
-.login-page input:focus {
-  outline: none;
-}
-.login-page button {
-  background-color: #999999;
-  color: #ffffff;
-  width: 200px;
-  border-radius: 0px 0px 0px 0px;
-}
 body {
   background-color: #ffffff;
   color: #232323;
